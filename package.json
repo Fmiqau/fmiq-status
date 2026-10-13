@@ -1,0 +1,13 @@
+{
+  "name": "fmiq-status",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FMIQ Nexus Status: a self hosted public status page on GitHub Actions and GitHub Pages",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "preview": "node scripts/render-fixture.mjs",
+    "monitor": "node scripts/run.mjs"
+  }
+}

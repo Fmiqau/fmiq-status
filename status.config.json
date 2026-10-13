@@ -1,0 +1,40 @@
+{
+  "siteName": "FMIQ Nexus Status",
+  "siteUrl": "https://status.fmiqnexus.au",
+  "websiteUrl": "https://fmiqnexus.au",
+  "appStatusUrl": "https://app.fmiqnexus.au/api/status.json",
+  "probe": {
+    "timeoutMs": 10000,
+    "attempts": 3,
+    "backoffMs": [2000, 5000],
+    "failuresBeforeChange": 2
+  },
+  "historyDays": 90,
+  "pastNoticeDays": 30,
+  "resolvedVisibleHours": 24,
+  "components": [
+    {
+      "id": "app",
+      "name": "FMIQ Nexus app",
+      "url": "https://app.fmiqnexus.au/api/live",
+      "failStatus": "down",
+      "autoIncident": true,
+      "incidentMessage": "We are aware that FMIQ Nexus is not responding and are investigating. Updates will follow here."
+    },
+    {
+      "id": "data",
+      "name": "Sign in and data",
+      "url": "https://app.fmiqnexus.au/api/health",
+      "failStatus": "degraded",
+      "autoIncident": false
+    },
+    {
+      "id": "website",
+      "name": "Website",
+      "url": "https://fmiqnexus.au/",
+      "failStatus": "down",
+      "autoIncident": true,
+      "incidentMessage": "We are aware that the FMIQ Nexus website is not responding and are investigating. The FMIQ Nexus app is checked separately above. Updates will follow here."
+    }
+  ]
+}
