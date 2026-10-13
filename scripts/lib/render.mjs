@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 // Builds the page model and renders index.html, status.json and feed.xml.
 
 import crypto from 'node:crypto';
@@ -178,8 +179,8 @@ a:hover{text-decoration-thickness:2px}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px}
 .site-head{background:var(--head-bg);color:var(--head-text);border-bottom:4px solid var(--cyan)}
 .site-head .wrap{display:flex;align-items:center;gap:12px;padding-top:18px;padding-bottom:18px}
-.mark{width:32px;height:32px;flex:none}
-.site-head h1{margin:0;font-size:1.5rem;line-height:1.2;font-weight:700;letter-spacing:.01em}
+.wordmark{height:30px;width:auto;display:block;flex:none}
+.site-head h1{display:flex;align-items:center;gap:12px;margin:0;font-size:1.5rem;line-height:1.2;font-weight:700;letter-spacing:.01em}
 .site-head h1 .accent{color:var(--cyan)}
 main.wrap{padding-top:24px;padding-bottom:8px}
 section{margin:0 0 32px}
@@ -238,7 +239,11 @@ h4{font-size:.95rem;margin:16px 0 8px}
 
 const JS = `(function(){try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone;if(tz&&tz!=="Australia/Sydney"){var f=new Intl.DateTimeFormat(undefined,{weekday:"short",day:"numeric",month:"short",hour:"numeric",minute:"2-digit",timeZoneName:"short"});var ts=document.querySelectorAll("time[data-local]");for(var i=0;i<ts.length;i++){var d=new Date(ts[i].getAttribute("datetime"));if(!isNaN(d)){var s=document.createElement("span");s.className="local";s.textContent=" (your time: "+f.format(d)+")";ts[i].parentNode.insertBefore(s,ts[i].nextSibling);}}}}catch(e){}setTimeout(function(){if(!document.hidden){location.reload();}else{document.addEventListener("visibilitychange",function(){if(!document.hidden){location.reload();}});}},60000);})();`;
 
-const MARK = `<svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#279CBE"/><path d="M9 23V9h14M9 16h10" fill="none" stroke="#292A29" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+// The official FMIQ Nexus wordmark (white, for the charcoal header), from the
+// brand files. Inlined as a data URI so the page needs no other file and the
+// strict CSP stays as it is.
+const WORDMARK = `data:image/svg+xml;base64,${readFileSync(new URL('../../assets/fmiq-nexus-wordmark-white.svg', import.meta.url)).toString('base64')}`;
+const MARK = `<img class="wordmark" src="${WORDMARK}" alt="FMIQ Nexus" width="160" height="30">`;
 const FAVICON = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#279CBE"/><path d="M9 23V9h14M9 16h10" fill="none" stroke="#292A29" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>')}`;
 
 const sha = (s) => `'sha256-${crypto.createHash('sha256').update(s, 'utf8').digest('base64')}'`;
@@ -288,7 +293,7 @@ export function renderHtml(model) {
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-head"><div class="wrap">${MARK}<h1>FMIQ Nexus <span class="accent">Status</span></h1></div></header>
+<header class="site-head"><div class="wrap"><h1>${MARK}<span class="accent">Status</span></h1></div></header>
 <main id="main" class="wrap">
 <section class="overall overall-${esc(overall.state)}" aria-labelledby="overall-h">
 <h2 id="overall-h">${esc(overall.label)}</h2>
