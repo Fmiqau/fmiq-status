@@ -1,0 +1,82 @@
+name: Monitor
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled]
+  issue_comment:
+    types: [created]
+
+# One run at a time. A queued run waits rather than cancelling the one in flight,
+# so history is never written by two runs at once.
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # force push history.json to the status-data branch
+  issues: write     # open, comment on and close automatic incidents
+  pages: write      # deploy the page
+  id-token: write   # required by deploy-pages
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+
+      - name: Load history from status-data
+        run: |
+          mkdir -p data
+          if git ls-remote --exit-code --heads origin status-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin status-data
+            git show FETCH_HEAD:history.json > data/history.json || rm -f data/history.json
+          else
+            echo "No status-data branch yet. Starting fresh history."
+          fi
+
+      - name: Probe, update notices and render
+        env:
+          DATA_DIR: data
+          OUT_DIR: _site
+          SKIP_PROBES: ${{ github.event_name == 'issues' || github.event_name == 'issue_comment' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+        run: node scripts/run.mjs
+
+      - name: Save history to status-data (single commit, force pushed)
+        run: |
+          blob=$(git hash-object -w data/history.json)
+          tree=$(printf '100644 blob %s\thistory.json\n' "$blob" | git mktree)
+          commit=$(git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit-tree "$tree" -m "Status data $(date -u +%Y-%m-%dT%H:%M:%SZ)")
+          git push --force origin "${commit}:refs/heads/status-data"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload page
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+      - name: Deploy page
+        id: deploy
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

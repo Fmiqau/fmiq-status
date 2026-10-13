@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-10-13T03:00:00.000Z",
+  "lastCheckedAt": "2026-10-13T03:00:00.000Z",
+  "page": "https://status.fmiqnexus.au",
+  "overall": {
+    "state": "degraded",
+    "label": "Some systems degraded"
+  },
+  "components": [
+    {
+      "id": "app",
+      "name": "FMIQ Nexus app",
+      "status": "up",
+      "responseMs": 312,
+      "lastCheckedAt": "2026-10-13T03:00:00.000Z",
+      "lastChangeAt": "2026-10-09T21:48:00.000Z",
+      "uptimePercent": 99.894,
+      "uptimeDays": 90
+    },
+    {
+      "id": "data",
+      "name": "Sign in and data",
+      "status": "degraded",
+      "responseMs": 2140,
+      "lastCheckedAt": "2026-10-13T03:00:00.000Z",
+      "lastChangeAt": "2026-10-13T02:35:00.000Z",
+      "uptimePercent": 100,
+      "uptimeDays": 90
+    },
+    {
+      "id": "website",
+      "name": "Website",
+      "status": "up",
+      "responseMs": 188,
+      "lastCheckedAt": "2026-10-13T03:00:00.000Z",
+      "lastChangeAt": "2026-09-03T00:00:00.000Z",
+      "uptimePercent": 100,
+      "uptimeDays": 90
+    }
+  ],
+  "incidents": [
+    {
+      "id": "gh-12",
+      "source": "github",
+      "url": "https://github.com/Fmiqau/fmiq-status/issues/12",
+      "kind": "incident",
+      "severity": "S2",
+      "title": "Slow sign in and data loading",
+      "body": "Some customers may see slow sign in and delays when loading work orders. Your data is safe. We are investigating.",
+      "status": "identified",
+      "components": [
+        "Sign in and data"
+      ],
+      "startsAt": "2026-10-13T02:40:00Z",
+      "endsAt": null,
+      "estimatedRestoreAt": "2026-10-13T04:30:00.000Z",
+      "updatedAt": "2026-10-13T02:58:00Z",
+      "resolvedAt": null,
+      "updates": [
+        {
+          "status": "identified",
+          "message": "We have found the cause, a slow database query after this morning's release. A fix is being applied now.",
+          "estimatedRestoreAt": "2026-10-13T04:30:00.000Z",
+          "createdAt": "2026-10-13T02:58:00Z"
+        }
+      ]
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "app-mnt-2026-10-18",
+      "source": "app",
+      "url": null,
+      "kind": "maintenance",
+      "severity": "S3",
+      "title": "Database upgrade",
+      "body": "We are upgrading the FMIQ Nexus database to a newer version. The app will be unavailable for up to two hours during this window. Work saved on the mobile app will sync once the work is complete.",
+      "status": "scheduled",
+      "components": [],
+      "startsAt": "2026-10-18T11:00:00.000Z",
+      "endsAt": "2026-10-18T13:00:00.000Z",
+      "estimatedRestoreAt": null,
+      "updatedAt": "2026-10-10T23:00:00.000Z",
+      "resolvedAt": null,
+      "updates": []
+    }
+  ],
+  "past": [
+    {
+      "id": "gh-9",
+      "source": "github",
+      "url": "https://github.com/Fmiqau/fmiq-status/issues/9",
+      "kind": "incident",
+      "severity": "S2",
+      "title": "FMIQ Nexus app unavailable",
+      "body": "We are aware that FMIQ Nexus is not responding and are investigating. Updates will follow here.",
+      "status": "resolved",
+      "components": [
+        "FMIQ Nexus app"
+      ],
+      "startsAt": "2026-10-09T21:10:00Z",
+      "endsAt": null,
+      "estimatedRestoreAt": null,
+      "updatedAt": "2026-10-09T21:50:00Z",
+      "resolvedAt": "2026-10-09T21:50:00Z",
+      "updates": [
+        {
+          "status": "monitoring",
+          "message": "Service restored at Sat 10 Oct 2026, 8:48 am AEDT. Monitoring.",
+          "estimatedRestoreAt": null,
+          "createdAt": "2026-10-09T21:50:00Z"
+        }
+      ]
+    },
+    {
+      "id": "app-mnt-2026-10-04",
+      "source": "app",
+      "url": null,
+      "kind": "maintenance",
+      "severity": "S3",
+      "title": "Platform security updates",
+      "body": "Routine security updates to the servers that run FMIQ Nexus.",
+      "status": "completed",
+      "components": [],
+      "startsAt": "2026-10-04T11:00:00.000Z",
+      "endsAt": "2026-10-04T11:40:00.000Z",
+      "estimatedRestoreAt": null,
+      "updatedAt": "2026-10-04T11:40:00.000Z",
+      "resolvedAt": "2026-10-04T11:40:00.000Z",
+      "updates": [
+        {
+          "status": "completed",
+          "message": "The updates are complete and FMIQ Nexus is available again.",
+          "estimatedRestoreAt": null,
+          "createdAt": "2026-10-04T11:40:00.000Z"
+        }
+      ]
+    }
+  ]
+}

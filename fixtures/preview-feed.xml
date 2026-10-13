@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>FMIQ Nexus Status</title>
+<subtitle>Incidents and planned maintenance for FMIQ Nexus</subtitle>
+<id>https://status.fmiqnexus.au/</id>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<link rel="self" type="application/atom+xml" href="https://status.fmiqnexus.au/feed.xml"/>
+<updated>2026-10-18T11:00:00.000Z</updated>
+<author><name>FMIQ Nexus</name></author>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:app-mnt-2026-10-18:open</id>
+<title>Planned maintenance: Database upgrade</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-18T11:00:00.000Z</updated>
+<content type="text">Scheduled. Window: Sun 18 Oct 2026, 10:00 pm AEDT to Mon 19 Oct 2026, 12:00 am AEDT.
+
+We are upgrading the FMIQ Nexus database to a newer version. The app will be unavailable for up to two hours during this window. Work saved on the mobile app will sync once the work is complete.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:gh-12:9001</id>
+<title>Identified: Slow sign in and data loading</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-13T02:58:00.000Z</updated>
+<content type="text">We have found the cause, a slow database query after this morning&apos;s release. A fix is being applied now.
+
+Estimated restore time: Tue 13 Oct 2026, 3:30 pm AEDT</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:gh-12:open</id>
+<title>Incident: Slow sign in and data loading</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-13T02:40:00.000Z</updated>
+<content type="text">Investigating. Estimated restore time: Tue 13 Oct 2026, 3:30 pm AEDT.
+
+Some customers may see slow sign in and delays when loading work orders. Your data is safe. We are investigating.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:gh-9:8001</id>
+<title>Monitoring: FMIQ Nexus app unavailable</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-09T21:50:00.000Z</updated>
+<content type="text">Service restored at Sat 10 Oct 2026, 8:48 am AEDT. Monitoring.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:gh-9:done</id>
+<title>Resolved: FMIQ Nexus app unavailable</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-09T21:50:00.000Z</updated>
+<content type="text">Resolved Sat 10 Oct 2026, 8:50 am AEDT.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:gh-9:open</id>
+<title>Incident: FMIQ Nexus app unavailable</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-09T21:10:00.000Z</updated>
+<content type="text">Investigating. Estimated restore time: not yet known.
+
+We are aware that FMIQ Nexus is not responding and are investigating. Updates will follow here.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:app-mnt-2026-10-04:0-2026-10-04T11:40:00.000Z</id>
+<title>Completed: Platform security updates</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-04T11:40:00.000Z</updated>
+<content type="text">The updates are complete and FMIQ Nexus is available again.</content>
+</entry>
+<entry>
+<id>tag:status.fmiqnexus.au,2026:app-mnt-2026-10-04:open</id>
+<title>Planned maintenance: Platform security updates</title>
+<link rel="alternate" type="text/html" href="https://status.fmiqnexus.au/"/>
+<updated>2026-10-04T11:00:00.000Z</updated>
+<content type="text">Scheduled. Window: Sun 4 Oct 2026, 10:00 pm AEDT to Sun 4 Oct 2026, 10:40 pm AEDT.
+
+Routine security updates to the servers that run FMIQ Nexus.</content>
+</entry>
+</feed>

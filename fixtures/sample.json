@@ -1,0 +1,133 @@
+{
+  "now": "2026-10-13T03:00:00.000Z",
+  "owner": "Fmiqau",
+  "components": {
+    "app": {
+      "daysOfData": 90,
+      "downDays": { "3": 42, "17": 95 },
+      "state": { "status": "up", "consecutiveFailures": 0, "lastResponseMs": 312, "lastChangeAt": "2026-10-09T21:48:00.000Z" }
+    },
+    "data": {
+      "daysOfData": 90,
+      "degradedDays": { "0": 25, "3": 40 },
+      "downDays": {},
+      "state": { "status": "degraded", "consecutiveFailures": 3, "lastResponseMs": 2140, "lastChangeAt": "2026-10-13T02:35:00.000Z" }
+    },
+    "website": {
+      "daysOfData": 40,
+      "downDays": {},
+      "state": { "status": "up", "consecutiveFailures": 0, "lastResponseMs": 188, "lastChangeAt": "2026-09-03T00:00:00.000Z" }
+    }
+  },
+  "issues": [
+    {
+      "issue": {
+        "number": 12,
+        "html_url": "https://github.com/Fmiqau/fmiq-status/issues/12",
+        "title": "Slow sign in and data loading",
+        "state": "open",
+        "user": { "login": "Fmiqau" },
+        "author_association": "OWNER",
+        "labels": [{ "name": "incident" }],
+        "created_at": "2026-10-13T02:40:00Z",
+        "updated_at": "2026-10-13T02:58:00Z",
+        "closed_at": null,
+        "comments": 2,
+        "body": "status: investigating\nseverity: S2\neta: unknown\ncomponents: Sign in and data\n\nSome customers may see slow sign in and delays when loading work orders. Your data is safe. We are investigating."
+      },
+      "comments": [
+        {
+          "id": 9001,
+          "user": { "login": "Fmiqau" },
+          "author_association": "OWNER",
+          "created_at": "2026-10-13T02:58:00Z",
+          "body": "status: identified\neta: 2026-10-13 15:30\n\nWe have found the cause, a slow database query after this morning's release. A fix is being applied now."
+        },
+        {
+          "id": 9002,
+          "user": { "login": "someone-else" },
+          "author_association": "NONE",
+          "created_at": "2026-10-13T02:59:00Z",
+          "body": "status: resolved\n\nThis comment is from someone else and must be ignored."
+        }
+      ]
+    },
+    {
+      "issue": {
+        "number": 13,
+        "html_url": "https://github.com/Fmiqau/fmiq-status/issues/13",
+        "title": "Everything is down (fake)",
+        "state": "open",
+        "user": { "login": "someone-else" },
+        "author_association": "NONE",
+        "labels": [{ "name": "incident" }],
+        "created_at": "2026-10-13T02:50:00Z",
+        "updated_at": "2026-10-13T02:50:00Z",
+        "closed_at": null,
+        "comments": 0,
+        "body": "severity: S1\n\nThis issue is not from the owner and must not appear."
+      },
+      "comments": []
+    },
+    {
+      "issue": {
+        "number": 9,
+        "html_url": "https://github.com/Fmiqau/fmiq-status/issues/9",
+        "title": "FMIQ Nexus app unavailable",
+        "state": "closed",
+        "user": { "login": "github-actions[bot]" },
+        "author_association": "NONE",
+        "labels": [{ "name": "incident" }, { "name": "auto-detected" }],
+        "created_at": "2026-10-09T21:10:00Z",
+        "updated_at": "2026-10-09T21:50:00Z",
+        "closed_at": "2026-10-09T21:50:00Z",
+        "comments": 1,
+        "body": "status: investigating\neta: unknown\ncomponents: FMIQ Nexus app\n\nWe are aware that FMIQ Nexus is not responding and are investigating. Updates will follow here."
+      },
+      "comments": [
+        {
+          "id": 8001,
+          "user": { "login": "github-actions[bot]" },
+          "author_association": "NONE",
+          "created_at": "2026-10-09T21:50:00Z",
+          "body": "status: monitoring\n\nService restored at Sat 10 Oct 2026, 8:48 am AEDT. Monitoring."
+        }
+      ]
+    }
+  ],
+  "appStatus": {
+    "generatedAt": "2026-10-13T02:55:00Z",
+    "notices": [
+      {
+        "id": "mnt-2026-10-18",
+        "kind": "maintenance",
+        "severity": "minor",
+        "title": "Database upgrade",
+        "body": "We are upgrading the FMIQ Nexus database to a newer version. The app will be unavailable for up to two hours during this window. Work saved on the mobile app will sync once the work is complete.",
+        "status": "scheduled",
+        "startsAt": "2026-10-18T11:00:00Z",
+        "endsAt": "2026-10-18T13:00:00Z",
+        "estimatedRestoreAt": null,
+        "updatedAt": "2026-10-10T23:00:00Z",
+        "updates": []
+      },
+      {
+        "id": "mnt-2026-10-04",
+        "kind": "maintenance",
+        "severity": "minor",
+        "title": "Platform security updates",
+        "body": "Routine security updates to the servers that run FMIQ Nexus.",
+        "status": "completed",
+        "startsAt": "2026-10-04T11:00:00Z",
+        "endsAt": "2026-10-04T11:40:00Z",
+        "estimatedRestoreAt": null,
+        "updatedAt": "2026-10-04T11:40:00Z",
+        "updates": [
+          { "status": "completed", "message": "The updates are complete and FMIQ Nexus is available again.", "estimatedRestoreAt": null, "createdAt": "2026-10-04T11:40:00Z" }
+        ]
+      },
+      { "kind": "unknown", "title": "garbage entry is dropped" },
+      "not an object"
+    ]
+  }
+}
