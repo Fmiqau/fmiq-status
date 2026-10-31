@@ -1,0 +1,472 @@
+{
+ "version": 1,
+ "lastRunAt": "2026-10-31T14:51:22.527Z",
+ "components": {
+  "app": {
+   "days": {
+    "2026-10-13": {
+     "checks": 3,
+     "failures": 0,
+     "minutesObserved": 37,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-14": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-15": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-16": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-17": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-18": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-19": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-20": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-21": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-22": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-23": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-24": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-25": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-26": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-27": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-28": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-29": {
+     "checks": 4,
+     "failures": 0,
+     "minutesObserved": 120,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-30": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-31": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-11-01": {
+     "checks": 1,
+     "failures": 0,
+     "minutesObserved": 30,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    }
+   },
+   "changes": [],
+   "status": "up",
+   "consecutiveFailures": 0,
+   "lastCheckedAt": "2026-10-31T14:51:22.527Z",
+   "lastResponseMs": 617,
+   "lastHttpStatus": 200,
+   "lastError": null,
+   "lastChangeAt": "2026-10-13T04:31:01.858Z"
+  },
+  "data": {
+   "days": {
+    "2026-10-13": {
+     "checks": 3,
+     "failures": 0,
+     "minutesObserved": 37,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-14": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-15": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-16": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-17": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-18": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-19": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-20": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-21": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-22": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-23": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-24": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-25": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-26": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-27": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-28": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-29": {
+     "checks": 4,
+     "failures": 0,
+     "minutesObserved": 120,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-30": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-31": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-11-01": {
+     "checks": 1,
+     "failures": 0,
+     "minutesObserved": 30,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    }
+   },
+   "changes": [],
+   "status": "up",
+   "consecutiveFailures": 0,
+   "lastCheckedAt": "2026-10-31T14:51:22.527Z",
+   "lastResponseMs": 656,
+   "lastHttpStatus": 200,
+   "lastError": null,
+   "lastChangeAt": "2026-10-13T04:31:01.858Z"
+  },
+  "website": {
+   "days": {
+    "2026-10-13": {
+     "checks": 3,
+     "failures": 0,
+     "minutesObserved": 37,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-14": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-15": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-16": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-17": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-18": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-19": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-20": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-21": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-22": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-23": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-24": {
+     "checks": 6,
+     "failures": 0,
+     "minutesObserved": 180,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-25": {
+     "checks": 8,
+     "failures": 0,
+     "minutesObserved": 240,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-26": {
+     "checks": 7,
+     "failures": 0,
+     "minutesObserved": 210,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-27": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-28": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-29": {
+     "checks": 4,
+     "failures": 0,
+     "minutesObserved": 120,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-30": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-10-31": {
+     "checks": 5,
+     "failures": 0,
+     "minutesObserved": 150,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    },
+    "2026-11-01": {
+     "checks": 1,
+     "failures": 0,
+     "minutesObserved": 30,
+     "minutesDown": 0,
+     "minutesDegraded": 0
+    }
+   },
+   "changes": [],
+   "status": "up",
+   "consecutiveFailures": 0,
+   "lastCheckedAt": "2026-10-31T14:51:22.527Z",
+   "lastResponseMs": 248,
+   "lastHttpStatus": 200,
+   "lastError": null,
+   "lastChangeAt": "2026-10-13T04:31:01.858Z"
+  }
+ },
+ "appNotices": {
+  "fetchedAt": "2026-10-31T14:51:22.527Z",
+  "generatedAt": "2026-10-31T14:51:23.664Z",
+  "notices": []
+ },
+ "githubNotices": {
+  "fetchedAt": "2026-10-31T14:51:22.527Z",
+  "notices": []
+ },
+ "sent": {}
+}
